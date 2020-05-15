@@ -368,6 +368,7 @@ body {
 
   }
   .style25 {
+    color: #1d809f;
     margin-top: 3vw;
     margin-bottom: 3vw;
   }
@@ -446,6 +447,7 @@ body {
     text-align: center;
   }
   .style25 {
+    color: #1d809f;
     text-align: center;
   }
   .progress {
@@ -595,7 +597,7 @@ body {
 
 .style25 {
   font-size: 2rem;
-  color: #0f0f0f;
+  color: #1d809f;
   text-align: center;
   margin-bottom: 2vw;
 }
