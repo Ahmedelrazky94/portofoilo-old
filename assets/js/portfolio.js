@@ -66,6 +66,12 @@
 
   function animate() {
       requestAnimationFrame(animate);
+    if(animateHeader) {
+          ctx.clearRect(0,0,width,height);
+          for(var i in circles) {
+              circles[i].draw();
+          }
+      }
   }
 
   // Canvas manipulation
@@ -76,7 +82,6 @@
       (function() {
           _this.pos = {};
           init();
-          console.log(_this);
       })();
 
       function init() {
