@@ -65,12 +65,6 @@
   }
 
   function animate() {
-      if(animateHeader) {
-          ctx.clearRect(0,0,width,height);
-          for(var i in circles) {
-              circles[i].draw();
-          }
-      }
       requestAnimationFrame(animate);
   }
 
