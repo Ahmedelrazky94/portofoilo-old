@@ -1,0 +1,177 @@
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;*/
+
+* {
+  text-align: center;
+  margin: 0;
+  padding: 0%;
+}
+
+.card-deck {
+  margin: auto;
+  padding: 0 10vw 3vw;
+}
+
+.card {
+  margin-top: 5vw;
+  padding: 0 5vw 2vw;
+}
+
+.ads {
+  margin: 3vw 3vw 0;
+}
+
+.heading1 {
+  font-family: 'Montserrat-bold';
+  font-size: 4.5rem;
+  line-height: 1.5;
+  color: white;
+  padding-bottom: 3%;
+  font-weight: 900;
+}
+
+.pink {
+  background-color: #ff4c68;
+}
+
+.container-fluid {
+  margin: auto;
+  padding-top: 3%;
+  scroll-padding-left: 15%;
+  padding-bottom: -60vw;
+}
+
+.iphone {
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+  transform: rotate(25deg);
+  padding-top: 5vw;
+}
+
+#navbarNavAltMarkup {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+}
+
+#dogtin {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+#main {
+  padding-left: 105;
+}
+
+.icon {
+  margin-top: 3vw;
+  color: #ff4c68;
+  margin-bottom: 7%;
+  text-align: center;
+}
+
+.icon:hover {
+  color: #ee8d64;
+}
+
+h3 {
+  text-align: center;
+}
+
+.pargs {
+  text-align: center;
+}
+
+.arousel-item active {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.dog {
+  float: left;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  width: 10%;
+  margin: 5vw 40vw 5vw;
+}
+
+h2 {
+  color: white;
+  font-weight: 900;
+  font-size: 5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5%;
+}
+
+.testimonial-image {
+  float: left;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  width: 10%;
+  margin-top: 5%;
+  margin-bottom: 5% ;
+  margin-left: 40% ;
+  margin-right: 40%;
+}
+
+#features {
+  z-index: 10;
+  padding-top: -40vw;
+  background-color: #fff;
+  position: relative;
+  bottom: 7vw;
+}
+
+.threeicon {
+  padding-top: 3vw;
+  margin-top: 3vw;
+}
+
+.planprice {
+  text-align: center;
+}
+
+.social-link {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+#cta {
+  padding-top: 7vw;
+  padding-bottom: 7vw;
+}
+
+.white {
+  color: white;
+}
+
+@media (max-width: 920px) {
+  .iphone {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .card-deck {
+    width: 80vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: center;
+  }
+  .ads {
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
+}
+
+.caption {
+  opacity: 0.5;
+}
