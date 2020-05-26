@@ -40,7 +40,6 @@
   }
 
   function animate() {
-      requestAnimationFrame(animate);
     if(animateHeader) {
           ctx.clearRect(0,0,width,height);
           for(var i in circles) {
