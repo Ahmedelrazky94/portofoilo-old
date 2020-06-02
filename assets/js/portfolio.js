@@ -1,83 +1,85 @@
+(function () {
 
-(function() {
+    var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
 
-  var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
-
-  // Main
-  initHeader();
+    // Main
+    initHeader();
 
 
-  function initHeader() {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      target = {x: 0, y: height};
+    function initHeader() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        target = {
+            x: 0,
+            y: height
+        };
 
-      largeHeader = document.getElementById('large-header');
-      largeHeader.style.height = height+'px';
+        largeHeader = document.getElementById('large-header');
+        largeHeader.style.height = height + 'px';
 
-      canvas = document.getElementById('demo-canvas');
-      canvas.width = width;
-      canvas.height = height;
-      ctx = canvas.getContext('2d');
+        canvas = document.getElementById('demo-canvas');
+        canvas.width = width;
+        canvas.height = height;
+        ctx = canvas.getContext('2d');
 
-      // create particles
-      circles = [];
-      for(var x = 0; x < width*0.8; x++) {
-          var c = new Circle();
-          circles.push(c);
-      }
-      animate();
-  }
+        // create particles
+        circles = [];
+        for (var x = 0; x < width * 0.8; x++) {
+            var c = new Circle();
+            circles.push(c);
+        }
+        animate();
+    }
 
-  // Event handling
- 
-  function resize() {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      largeHeader.style.height = height+'px';
-      canvas.width = width;
-      canvas.height = height;
-  }
+    // Event handling
 
-  function animate() {
-      requestAnimationFrame(animate);
-    if(animateHeader) {
-          ctx.clearRect(0,0,width,height);
-          for(var i in circles) {
-              circles[i].draw();
-          }
-      }
-  }
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        largeHeader.style.height = height + 'px';
+        canvas.width = width;
+        canvas.height = height;
+    }
 
-  // Canvas manipulation
-  function Circle() {
-      var _this = this;
+    function animate() {
+        requestAnimationFrame(animate);
+        if (animateHeader) {
+            ctx.clearRect(0, 0, width, height);
+            for (var i in circles) {
+                circles[i].draw();
+            }
+        }
+    }
 
-      // constructor
-      (function() {
-          _this.pos = {};
-          init();
-      })();
+    // Canvas manipulation
+    function Circle() {
+        var _this = this;
 
-      function init() {
-          _this.pos.x = Math.random()*width;
-          _this.pos.y = height+Math.random()*100;
-          _this.alpha = 0.1+Math.random()*0.3;
-          _this.scale = 0.1+Math.random()*0.3;
-          _this.velocity = Math.random();
-      }
+        // constructor
+        (function () {
+            _this.pos = {};
+            init();
+        })();
 
-      this.draw = function() {
-          if(_this.alpha <= 0) {
-              init();
-          }
-          _this.pos.y -= _this.velocity;
-          _this.alpha -= 0.0005;
-          ctx.beginPath();
-          ctx.arc(_this.pos.x, _this.pos.y, _this.scale*10, 0, 2 * Math.PI, false);
-          ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
-          ctx.fill();
-      };
-  }
+        function init() {
+            _this.pos.x = Math.random() * width;
+            _this.pos.y = height + Math.random() * 100;
+            _this.alpha = 0.1 + Math.random() * 0.3;
+            _this.scale = 0.1 + Math.random() * 0.3;
+            _this.velocity = Math.random();
+        }
 
-})();  
+        this.draw = function () {
+            if (_this.alpha <= 0) {
+                init();
+            }
+            _this.pos.y -= _this.velocity;
+            _this.alpha -= 0.0005;
+            ctx.beginPath();
+            ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
+            ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
+            ctx.fill();
+        };
+    }
+
+})();
